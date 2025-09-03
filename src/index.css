@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MelodyHub Global Styles */
+body {
+  @apply bg-slate-900 text-white antialiased;
+  scroll-behavior: smooth;
+}
+
+/* MelodyHub Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* dark navy */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #38bdf8; /* baby blue */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #60a5fa; /* lighter blue */
+}
+
+/* MelodyHub Page Transition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-fade {
+  animation: fadeIn 0.4s ease-in-out;
+}
